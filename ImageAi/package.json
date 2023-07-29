@@ -1,7 +1,7 @@
 {
   "name": "imageai",
   "private": true,
-  "homepage": ".",
+  "homepage": "./imageai",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
