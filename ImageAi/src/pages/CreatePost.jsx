@@ -17,7 +17,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("https://piotrperczak.site/imageai/api/v1/dalle", {
+        const response = await fetch("https://piotrperczak.site/imageaiapi/api/v1/dalle", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -42,7 +42,7 @@ const CreatePost = () => {
       setLoading(true);
       console.log(form);
       try {
-        const response = await fetch("https://piotrperczak.site/imageai/api/v1/post", {
+        const response = await fetch("https://piotrperczak.site/imageaiapi/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
