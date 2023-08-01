@@ -17,7 +17,7 @@ const CreatePost = () => {
     if (form.prompt) {
       try {
         setGeneratingImg(true);
-        const response = await fetch("http://127.0.0.1:8080/api/v1/dalle", {
+        const response = await fetch("https://piotrperczak.site/imageai/api/v1/dalle", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -42,7 +42,7 @@ const CreatePost = () => {
       setLoading(true);
       console.log(form);
       try {
-        const response = await fetch("http://127.0.0.1:8080/api/v1/post", {
+        const response = await fetch("https://piotrperczak.site/imageai/api/v1/post", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ const CreatePost = () => {
           body: JSON.stringify(form),
         });
         await response.json();
-        navigate("/");
+        navigate("/imageai");
       } catch (err) {
         alert(err);
       } finally {
