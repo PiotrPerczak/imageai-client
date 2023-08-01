@@ -20,7 +20,7 @@ const Home = () => {
     const fetchPosts = async () => {
       setLoading(true);
       try {
-        const response = await fetch("https://piotrperczak.site/imageaiapi/api/v1/home", {
+        const response = await fetch("https://piotrperczak.site/imageaiapi/api/v1/post/home", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
